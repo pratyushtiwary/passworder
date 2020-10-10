@@ -1,0 +1,162 @@
+.modal .note {
+  position: relative;
+  z-index: 1;
+  word-break: break-word;
+  max-height: 60vh;
+}
+.modal .pass {
+  position: relative;
+  z-index: 2;
+}
+.modal .pass .new {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  z-index: 4;
+  transform: translate(0%, -50%);
+  padding: 10px;
+  height: 100%;
+  align-content: center;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: 0.15s ease;
+  background: #eee;
+}
+.modal .pass .new:focus, .modal .pass .new:hover {
+  filter: brightness(0.75);
+}
+
+.p-container {
+  display: unset;
+  position: relative;
+}
+
+.passwords {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 10px;
+  grid-gap: 1em;
+}
+.passwords .password {
+  position: relative;
+  margin: 10px;
+  box-shadow: 0 0 5px 0 #eee;
+  border-radius: 4px;
+  padding: 20px 10px;
+  transition: 0.25s ease;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  cursor: pointer;
+}
+.passwords .password .main .name {
+  font-size: 28pt;
+  align-self: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+}
+.passwords .password .main .note {
+  background: #eee;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  height: 70%;
+}
+.passwords .password .main .note .nm {
+  display: block;
+  font-size: 12pt !important;
+  margin-bottom: 5px;
+  display: grid;
+  width: 125px;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+.passwords .password .main .note .nm span {
+  font-size: 12pt !important;
+}
+.passwords .password .main .note .content {
+  margin-left: 17.5px;
+  max-height: 93px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.passwords .password .menu {
+  position: relative;
+  justify-self: center;
+  display: grid;
+}
+.passwords .password .menu .more {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  display: grid;
+  transition: 0.25s ease;
+  justify-content: center;
+  align-content: center;
+}
+.passwords .password .menu .more:hover, .passwords .password .menu .more:focus {
+  background: #eee;
+}
+.passwords .password .menu .h-menu {
+  position: absolute;
+  left: -200%;
+  top: 0%;
+  background: #fff;
+  display: grid;
+  box-shadow: 1px 1px 5px 0 #eee;
+  border-radius: 4px;
+  width: 150px;
+  transform: scale(0);
+  transition: 0.15s ease;
+  transform-origin: right;
+}
+.passwords .password .menu .h-menu.show {
+  transform: scale(1);
+}
+.passwords .password .menu .h-menu .item {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  align-items: center;
+  padding: 5px;
+  transition: 0.25s ease;
+}
+.passwords .password .menu .h-menu .item .icon {
+  padding: 10px;
+  border-right: 1px solid #eee;
+  margin-right: 10px;
+}
+.passwords .password .menu .h-menu .item:hover, .passwords .password .menu .h-menu .item:focus {
+  background: #eee;
+}
+.passwords .empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.passwords .empty .empty-img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 200px;
+  height: 200px;
+  background: url("/svg/empty.svg");
+  background-position: 50% 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.passwords .empty span {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,43 @@
+.textarea {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  margin-top: 10px;
+  background: #eee;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  z-index: 1;
+}
+.textarea label {
+  position: absolute;
+  padding: 10px;
+  padding-top: 15px;
+  color: blue;
+  transition: 0.15s ease;
+}
+.textarea label.float {
+  padding: 0px;
+  margin-left: 2.5px;
+  top: 3%;
+  font-size: 10pt;
+}
+.textarea textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 10px;
+  padding-top: 20px;
+  resize: none;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.25s ease;
+  font-size: 16pt;
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+}
+.textarea textarea:focus {
+  border-bottom: 1px solid blue;
+}
+
+/*# sourceMappingURL=textarea.css.map */

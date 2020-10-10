@@ -1,0 +1,48 @@
+.popover-container {
+  width: auto;
+  height: fit-content;
+  position: relative;
+  left: auto;
+  z-index: 3;
+}
+.popover-container span {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  width: fit-content;
+  max-width: 20ch;
+  word-wrap: break-word;
+  transition: 0.15s linear;
+  z-index: 20;
+}
+.popover-container span::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 1.5%;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+  background: #000;
+  border-radius: 1px;
+  z-index: 2;
+}
+
+.popover-container.visible span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 476px) {
+  .popover-container {
+    font-size: 15pt;
+  }
+}
+
+/*# sourceMappingURL=popover.css.map */
