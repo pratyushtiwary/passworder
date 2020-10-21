@@ -2,25 +2,26 @@ const enc = require('./enc');
 let session = {};
 
 session.setSalt = (salt)=>{
-    localStorage.setItem("salt",enc.encrypt(salt,"drjwhawosuesxnsbdydnxw"));
+    localStorage.setItem("pw_salt",enc.encrypt(salt,"drjwhawosuesxnsbdydnxw"));
     return true;
 }
 
 session.getSalt = ()=>{
-    if(localStorage.getItem("salt")){
-        return (enc.decrypt(localStorage.getItem("salt"),"drjwhawosuesxnsbdydnxw"));
+    if(localStorage.getItem("pw_salt")){
+        return (enc.decrypt(localStorage.getItem("pw_salt"),"drjwhawosuesxnsbdydnxw"));
     }
     return false;
 }
 
 session.saltExists = ()=>{
-    if(localStorage.getItem("salt")){
+    if(localStorage.getItem("pw_salt")){
         return true;
     }
     return false;
 }
 
 session.set = (key,value)=>{
+    key  = "pw_"+key;
     if(!localStorage.getItem(key)){
         localStorage.setItem(key,enc.encrypt("[]",session.getSalt()));
     }
@@ -29,6 +30,7 @@ session.set = (key,value)=>{
 }
 
 session.get = (key)=>{
+    key  = "pw_"+key;
     let t = localStorage.getItem(key);
     if(t){
         return enc.decrypt(t,session.getSalt());
