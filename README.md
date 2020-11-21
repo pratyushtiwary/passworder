@@ -19,4 +19,4 @@
 ## To Build
  - Copy the repo locally,
  - Extract files of the repo,
- - Run terminal on the same directory and run `npm install` and `npm build`
+ - Run terminal on the same directory and run `npm install` and `npm run build`
