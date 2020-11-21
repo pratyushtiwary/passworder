@@ -2,7 +2,7 @@
 
 >  A password vault made using react and sass
  
- [pratyushtiwary.github.io/passworder/](https://www.pratyushtiwary.github.io/passworder/)
+ [pratyushtiwary.github.io/passworder/](https://pratyushtiwary.github.io/passworder/#)
 
 ## Features
 
